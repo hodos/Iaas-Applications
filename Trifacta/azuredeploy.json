@@ -13,7 +13,7 @@
             "metadata": {
                 "description" : "Any non-empty value is accepted. After the package is published, this parameter will be used to link the application install to the details about the application in the marketplace."
             },
-            "defaultValue": "Hue"
+            "defaultValue": "Trifacta"
         },
         "edgeNodeSize": {
             "type": "string",

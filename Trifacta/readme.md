@@ -1,13 +1,9 @@
-# Install Hue as an HDInsight Iaas Cluster Application
-
 Installs Hue as an Iaas Cluster Application on an existing cluster -<br>
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhdinsight%2FIaas-Applications%2Fmaster%2FHue%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
-Template installs Hue as an Iaas Cluster Application on an existing cluster. 
-The Hue dashboard is accessible via Https by using the cluster username and password.
-To access the Hue dashboard, go to the cluster in the Azure portal and click on the Apps pane.
+Template installs Trifacta as an Iaas Cluster Application on an existing cluster. 
 
 Additionally, the edge node has WebWasb, a WebHDFS implementation over the WASB Storage System. <br />
 WebWasb allows you to access and execute commands against the default WASB container of the cluster using the WebHDFS interface.<br />

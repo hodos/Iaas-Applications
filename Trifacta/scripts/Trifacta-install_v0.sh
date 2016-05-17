@@ -9,26 +9,7 @@ WEBWASB_TARFILEURI=https://hdiconfigactions.blob.core.windows.net/linuxhueconfig
 WEBWASB_TMPFOLDER=/tmp/webwasb
 WEBWASB_INSTALLFOLDER=/usr/share/webwasb-tomcat
 
-HUE_TARFILE=hue-binaries.tgz
-
-OS_VERSION=$(lsb_release -sr)
-if [[ $OS_VERSION == 14* ]]; then
-    echo "OS verion is $OS_VERSION. Using hue-binaries-14-04."
-    HUE_TARFILE=hue-binaries-14-04.tgz
-fi
-
-HUE_TARFILEURI=https://hdiconfigactions.blob.core.windows.net/linuxhueconfigactionv01/$HUE_TARFILE
-HUE_TMPFOLDER=/tmp/hue
-HUE_INSTALLFOLDER=/usr/share/hue
-HUE_INIPATH=$HUE_INSTALLFOLDER/desktop/conf/hue.ini
 ACTIVEAMBARIHOST=headnodehost
-
-usage() {
-    echo ""
-    echo "Usage: sudo -E bash install-hue-uber-v02.sh";
-    echo "This script does NOT require Ambari username and password";
-    exit 132;
-}
 
 checkHostNameAndSetClusterName() {
     fullHostName=$(hostname -f)
@@ -230,7 +211,7 @@ echo JAVA_HOME=$JAVA_HOME
 
 checkHostNameAndSetClusterName
 validateUsernameAndPassword
-updateAmbariConfigs
+#updateAmbariConfigs
 stopServiceViaRest HDFS
 stopServiceViaRest YARN
 stopServiceViaRest MAPREDUCE2
@@ -238,7 +219,7 @@ stopServiceViaRest OOZIE
 
 echo "Download and unzip WebWasb and Hue while services are STOPPING"
 downloadAndUnzipWebWasb
-downloadAndUnzipHue
+#downloadAndUnzipHue
 
 startServiceViaRest YARN
 startServiceViaRest MAPREDUCE2
@@ -246,4 +227,4 @@ startServiceViaRest OOZIE
 startServiceViaRest HDFS
 
 setupWebWasbService
-setupHueService
+#setupHueService

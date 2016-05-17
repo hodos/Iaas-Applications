@@ -58,7 +58,7 @@
             }],
             "uninstallScriptActions": [],
             "httpsEndpoints": [{
-                "subDomainSuffix": "trifacta",
+                "subDomainSuffix": "tf",
                 "destinationPort": 3005,
                 "accessModes": ["webpage"]
             },

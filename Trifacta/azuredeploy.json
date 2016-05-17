@@ -53,7 +53,7 @@
             },
             "installScriptActions": [{
                 "name": "hue-install-v0",
-                "uri": "https://raw.githubusercontent.com/hdinsight/Iaas-Applications/master/Hue/scripts/Hue-install_v0.sh",
+                "uri": "https://raw.githubusercontent.com/hodos/Iaas-Applications/master/Trifacta/scripts/Trifacta-install_v0.sh",
                 "roles": ["edgenode"]
             }],
             "uninstallScriptActions": [],

@@ -56,7 +56,7 @@
             }],
             "uninstallScriptActions": [],
             "httpsEndpoints": [{
-                "subDomainSuffix": "tf",
+                "subDomainSuffix": "tfa",
                 "destinationPort": 3005,
                 "accessModes": ["webpage"]
             },

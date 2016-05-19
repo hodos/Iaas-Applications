@@ -211,15 +211,14 @@ echo JAVA_HOME=$JAVA_HOME
 
 checkHostNameAndSetClusterName
 validateUsernameAndPassword
-#updateAmbariConfigs
+updateAmbariConfigs
 stopServiceViaRest HDFS
 stopServiceViaRest YARN
 stopServiceViaRest MAPREDUCE2
 stopServiceViaRest OOZIE
 
-echo "Download and unzip WebWasb and Hue while services are STOPPING"
+echo "Download and unzip WebWasb while services are STOPPING"
 downloadAndUnzipWebWasb
-#downloadAndUnzipHue
 
 startServiceViaRest YARN
 startServiceViaRest MAPREDUCE2
@@ -227,4 +226,3 @@ startServiceViaRest OOZIE
 startServiceViaRest HDFS
 
 setupWebWasbService
-#setupHueService

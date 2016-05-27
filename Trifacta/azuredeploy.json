@@ -24,6 +24,8 @@
             "allowedValues": [
                 "Standard_A1",
                 "Standard_A2",
+                "Standard_A3",
+                "Standard_A4",
                 "Standard_D1",
                 "Standard_D2",
                 "Standard_D3",
@@ -32,10 +34,11 @@
         }
     },
     "variables": {
-        "clusterApiVersion": "2015-03-01-preview"
+        "clusterApiVersion": "2015-03-01-preview",
+        "applicationName": "trifacta"
     },
     "resources": [{
-        "name": "[concat(parameters('clusterName'),'/trifacta')]",
+        "name": "[concat(parameters('clusterName'),'/', variables('applicationName'))]",
         "type": "Microsoft.HDInsight/clusters/applications",
         "apiVersion": "[variables('clusterApiVersion')]",
         "properties": {
@@ -50,7 +53,7 @@
                 }]
             },
             "installScriptActions": [{
-                "name": "trifacta-install-v0",
+                "[concat('trifacta-install-v0','-' ,uniquestring(variables('applicationName')))]",
                 "uri": "https://raw.githubusercontent.com/hodos/Iaas-Applications/master/Trifacta/scripts/Trifacta-install_v0.sh",
                 "roles": ["edgenode"]
             }],
@@ -70,7 +73,7 @@
     "outputs": {
         "application": {
             "type": "object",
-             "value" :  "[reference(resourceId('Microsoft.HDInsight/clusters/applications/',parameters('clusterName'), 'trifacta'))]"
+            "value": "[reference(resourceId('Microsoft.HDInsight/clusters/applications/',parameters('clusterName'), variables('applicationName')))]"
         }
     }
 }

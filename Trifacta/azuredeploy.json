@@ -53,7 +53,7 @@
                 }]
             },
             "installScriptActions": [{
-                "[concat('trifacta-install-v0','-' ,uniquestring(variables('applicationName')))]",
+                "name": "[concat('trifacta-install-v0','-' ,uniquestring(variables('applicationName')))]",
                 "uri": "https://raw.githubusercontent.com/hodos/Iaas-Applications/master/Trifacta/scripts/Trifacta-install_v0.sh",
                 "roles": ["edgenode"]
             }],

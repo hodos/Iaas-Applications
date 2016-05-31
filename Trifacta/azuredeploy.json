@@ -64,7 +64,7 @@
                 "accessModes": ["webpage"]
             },
             {
-                "subDomainSuffix": "was",
+                "subDomainSuffix": "tfw",
                 "destinationPort": 50073
             }],
             "applicationType": "CustomApplication"

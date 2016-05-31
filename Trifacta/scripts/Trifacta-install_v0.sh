@@ -122,6 +122,12 @@ setupWebWasbService() {
     start webwasb
 }
 
+installRequiredPackages() {
+    sudo apt-get install software-properties-common
+    sudo apt-add-repository -y ppa:ansible/ansible
+    sudo apt-get update
+    sudo apt-get install -y ansible
+}
 ##############################
 if [ "$(id -u)" != "0" ]; then
     echo "[ERROR] The script has to be run as root."
@@ -160,3 +166,5 @@ startServiceViaRest OOZIE
 startServiceViaRest HDFS
 
 setupWebWasbService
+
+installRequiredPackages

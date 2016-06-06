@@ -142,11 +142,6 @@ PASSWD=$(echo -e "import hdinsight_common.ClusterManifestParser as ClusterManife
 
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 
-if [ -e $HUE_INSTALLFOLDER ]; then
-    echo "Hue is already installed. Exiting ..."
-    exit 0
-fi
-
 echo JAVA_HOME=$JAVA_HOME
 
 checkHostNameAndSetClusterName

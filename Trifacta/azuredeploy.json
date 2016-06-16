@@ -20,12 +20,8 @@
             "metadata": {
                 "description": "Size of the edge node that hosts the application"
             },
-            "defaultValue": "Standard_A3",
+            "defaultValue": "Standard_D2",
             "allowedValues": [
-                "Standard_A1",
-                "Standard_A2",
-                "Standard_A3",
-                "Standard_A4",
                 "Standard_D1",
                 "Standard_D2",
                 "Standard_D3",
